@@ -1,0 +1,329 @@
+
+*{
+margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+ 
+ html,body{
+   height: 100%;
+   width: 100%;
+ }
+ 
+           /* Making the loader */
+ 
+ .loader{
+   background-color: black;
+   color: white;
+   height: 100vh;
+   width: 100%;
+   z-index: 99;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 10px;
+   position: fixed;
+   top: 0;
+ }
+ .loader h2{
+   font-weight: 700;
+   font-size: 3vw;
+ }
+ /* finished ✅ */
+ 
+ 
+                         /* Making the multi-color Background */
+ 
+ 
+ .container{
+   height: 100;
+   width: 100%;
+   background: linear-gradient(45deg,#d2001a,#7462ff,#f48e21,#23d5ab);
+   background-size: 300% 300%;
+   animation: color 12s ease-in-out infinite;
+   display: flex;
+   flex-direction: column;
+ }
+ @keyframes color {
+   0%{
+     background-position: 0 50%;
+   }
+   50%{
+     background-position: 100% 50%;
+   }
+   100%{
+     background-position: 0 50%;
+   }
+ }
+ /* finished ✅ */
+ 
+ 
+                         /* Making the header content */
+ 
+ header h1{
+   background-color: rgb(66, 64, 64);
+   color: white;
+   text-align: center;
+   padding: 1.5vw;
+   width: 100%;
+ }
+ 
+ .link{
+ background-color: rgb(30, 29, 29);
+ padding: 1vw;
+ display: flex;
+ justify-content: end;
+ }
+ 
+ .link a{
+   color: white;
+   text-decoration: none;
+   font-weight: 600;
+ }
+ /* finished ✅ */
+ 
+                         /* Making the body section */
+ main {
+   flex-grow: 1;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+ }
+ 
+ main h2{
+   margin: 2vw;
+ }
+ 
+ .images-container{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+   height: 100%;
+   width: 100%;
+   perspective: 1000px;
+   font-size: 4vw;
+ }
+ 
+ 
+ .card1{
+   height: 15rem;
+   width: 10rem;
+   transition: transform 1000ms;
+   box-shadow: 0 0 5px 2px rgba(50, 50, 50);
+   border-radius: 15px;
+   position: relative;
+   transform-style: preserve-3d;
+ }
+ 
+ .card1:hover{
+   cursor: pointer;
+   transform: rotateY(180deg);
+ }
+ 
+ .card2{
+   height: 15rem;
+   width: 10rem;
+   transition: transform 1000ms;
+   box-shadow: 0 0 5px 2px rgba(50, 50, 50);
+   border-radius: 15px;
+   position: relative;
+   transform-style: preserve-3d;
+ }
+ 
+ .card2:hover{
+   cursor: pointer;
+   transform: rotateY(180deg);
+ }
+ 
+ .card3{
+   height: 15rem;
+   width: 10rem;
+   transition: transform 1000ms;
+   box-shadow: 0 0 5px 2px rgba(50, 50, 50);
+   border-radius: 15px;
+   position: relative;
+   transform-style: preserve-3d;
+ }
+ 
+ .card3:hover{
+   cursor: pointer;
+   transform: rotateY(180deg);
+ }
+ 
+ .book,.details{
+   border-radius: 15px;
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   backface-visibility: hidden;
+   background-size: cover;
+ }
+ 
+ .book1{
+   background-image: url(../public/bha2img.jpeg);
+ }
+ .book2{
+   background-image: url(../public/psh-moneyimg.webp);
+ }
+ .book3{
+   background-image: url(../public/whynotme.jpg);
+ }
+ 
+ .details{
+   background-color: gray;
+   transform: rotateY(180deg);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: white;
+   font-weight: 600;
+   font-size: 1.4vw;
+ }
+ /* finished ✅ */
+ 
+ 
+                         /* Making the footer section */
+ 
+ 
+ footer{
+   background-color: rgba(0, 0, 0, 0.813);
+   color: white;
+   padding: 2vh;
+   display: flex;
+   align-items: center; /* Center text vertically */
+   justify-content: center;
+ }
+ footer{
+   margin-top: 15.3vh;
+ }
+ /* finished ✅ */
+ 
+ 
+ @media (max-width: 768px) {
+ 
+   .loader h2 {
+     font-size: 5vw;
+   }
+ 
+   .container {
+     flex-direction: column;
+   }
+ 
+   header h1 {
+     font-size: 4vw;
+     padding: 2vw;
+   }
+ 
+   .link {
+     padding: 2vw;
+   }
+ 
+   .images-container {
+     flex-direction: column;
+     align-items: center;
+     gap: 5vh;
+     line-height: 5vh;
+   }
+ 
+   .card1, .card2, .card3 {
+     height: 14rem;
+     width: 10rem;
+   }
+ 
+   .book, .details {
+     font-size: 3vw;
+   }
+ 
+   .details a{
+     font-size: 20px;
+ 
+   }
+ 
+   footer {
+     padding: 2vh 5vw;
+     font-size: 1.2rem;
+   }
+ }
+ 
+ /* For mobile phones */
+ @media (max-width: 480px) {
+ 
+   .loader h2 {
+     font-size: 7vw;
+   }
+ 
+   .container {
+     flex-direction: column;
+   }
+ 
+   header h1 {
+     font-size: 5vw;
+     padding: 3vw;
+   }
+ 
+   .link {
+     padding: 3vw;
+   }
+ 
+   .images-container {
+     flex-direction: column;
+     align-items: center;
+     gap: 30px;
+     line-height: 5vh;
+   }
+ 
+   .card1, .card2, .card3 {
+     height: 12rem;
+     width: 9rem;
+   }
+ 
+   .book, .details {
+     font-size: 4vw;
+     line-height: 5vh;
+     padding: 2vh;
+   }
+ 
+   footer {
+     padding: 3vh 4vw;
+     font-size: 1.1rem;
+   }
+ }
+ 
+ /* For very small mobile screens */
+ @media (max-width: 320px) {
+ 
+   .loader h2 {
+     font-size: 8vw;
+   }
+ 
+   header h1 {
+     font-size: 6vw;
+     padding: 4vw;
+   }
+ 
+   .link {
+     padding: 4vw;
+   }
+ 
+   .images-container {
+     flex-direction: column;
+     align-items: center;
+     gap: 10px;
+   }
+ 
+   .card1, .card2, .card3 {
+     height: 9rem;
+     width: 7rem;
+   }
+ 
+   .book, .details {
+     font-size: 5vw;
+     line-height: 5vh;
+   }
+ 
+   footer {
+     padding: 4vh 3vw;
+     font-size: 1rem;
+   }
+ }
